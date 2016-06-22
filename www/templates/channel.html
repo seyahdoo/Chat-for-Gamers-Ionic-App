@@ -1,0 +1,26 @@
+<ion-view view-title="{{data.channelName}}">
+  <ion-content  delegate-handle="mainScroll">
+    <div>
+      <ion-list>
+        <ion-item ng-repeat="message in messages">
+          {{message.username}}:{{message.text}}
+        </ion-item>
+      </ion-list>
+    </div>
+    
+    
+    <form>
+      <div class="list">
+        <div class="item item-input-inset">
+          <label class="item-input-wrapper">
+            <input type="text" placeholder="Write your message here" ng-model="data.text" style="width: 100%;">
+          </label>
+          <button class="button button-small" ng-click="send()" ng-disabled="sendButtonDisabled">
+            Send
+          </button>
+        </div>
+      </div>
+    </form>
+
+  </ion-content>  
+</ion-view>

@@ -1,0 +1,9 @@
+<ion-view view-title="Chat for Gamers">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="channel in channels" href="#/app/channel/{{channel.id}}">
+        {{channel.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
